@@ -72,11 +72,13 @@
                                 echo "<td>" . $siswa['agama'] . "</td>";
                                 echo "<td>" . $siswa['sekolah_asal'] . "</td>";
                                 
-                                echo "<td>";
-                                echo "<a href='form-edit.php?id=" . $siswa['id'] . "'>Edit</a> | ";
-                                echo "<a href='hapus.php?id=" . $siswa['id'] . "'>Hapus</a>";
-                                echo "</td>";
+                                $message = "Apakah Anda yakin ingin menghapus pendaftar dengan id " . $siswa['id'] . " ?";
                                 
+                                echo "<td>";
+                                echo "<a href='form-edit.php?id=" . $siswa['id'] . "' >Edit</a> | ";
+                                echo "<a href='hapus.php?id=" . $siswa['id'] . "' onclick='return confirm(" . '"' . $message . '"' . ")' >Hapus</a>";
+                                echo "</td>";
+
                                 echo "</tr>";
                             }		
                         ?>
