@@ -1,5 +1,5 @@
 <?php
-    include("assets/php/config.php");
+    include("config.php");
 
     if (isset($_GET['id'])) {
         $id = $_GET['id'];

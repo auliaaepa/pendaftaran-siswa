@@ -1,5 +1,5 @@
 <?php 
-    include("assets/php/config.php"); 
+    include("config.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +55,7 @@
                         <th>Jenis Kelamin</th>
                         <th>Agama</th>
                         <th>Sekolah Asal</th>
+                        <th>Foto</th>
                         <th>Tindakan</th>
                     </thead>
                     <tbody>
@@ -71,12 +72,13 @@
                                 echo "<td>" . $siswa['jenis_kelamin'] . "</td>";
                                 echo "<td>" . $siswa['agama'] . "</td>";
                                 echo "<td>" . $siswa['sekolah_asal'] . "</td>";
-                                
+                                echo "<td><img src='image/" .  $siswa['nama_foto']. "' width=90px height=120px></td>";
+
                                 $message = "Apakah Anda yakin ingin menghapus pendaftar dengan id " . $siswa['id'] . " ?";
                                 
                                 echo "<td>";
-                                echo "<a href='form-edit.php?id=" . $siswa['id'] . "' >Edit</a> | ";
-                                echo "<a href='hapus.php?id=" . $siswa['id'] . "' onclick='return confirm(" . '"' . $message . '"' . ")' >Hapus</a>";
+                                echo "<a class='me-1' href='form-edit.php?id=" . $siswa['id'] . "' ><button type='button' class='btn btn-sm btn-warning'><i class='fa fa-pencil'></i></button></a>";
+                                echo "<a href='hapus.php?id=" . $siswa['id'] . "' onclick='return confirm(" . '"' . $message . '"' . ")' ><button type='button' class='btn btn-sm btn-danger'><i class='fa fa-trash'></i></button></a>";
                                 echo "</td>";
 
                                 echo "</tr>";

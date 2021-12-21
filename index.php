@@ -42,6 +42,18 @@
                     echo "<div>Pendaftaran siswa baru berhasil dilakukan!</div>";
                     echo "<button type='button' class='btn-close' data-dismiss='alert' data-bs-dismiss='alert' aria-label='Close'></button>";
                     echo "</div>";
+                } else if ($_GET['status'] == 'gagal-simpan'){
+                    echo "<div class='alert alert-danger alert-dismissible d-flex align-items-center fade show' role='alert'>";
+                    echo "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Danger:'><use xlink:href='#exclamation-triangle-fill'/></svg>";
+                    echo "<div>Foto gagal disimpan!</div>";
+                    echo "<button type='button' class='btn-close' data-dismiss='alert' data-bs-dismiss='alert' aria-label='Close'></button>";
+                    echo "</div>";
+                } else if ($_GET['status'] == 'gagal-upload'){
+                    echo "<div class='alert alert-danger alert-dismissible d-flex align-items-center fade show' role='alert'>";
+                    echo "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Danger:'><use xlink:href='#exclamation-triangle-fill'/></svg>";
+                    echo "<div>Foto gagal diupload!</div>";
+                    echo "<button type='button' class='btn-close' data-dismiss='alert' data-bs-dismiss='alert' aria-label='Close'></button>";
+                    echo "</div>";
                 } else {
                     echo "<div class='alert alert-danger alert-dismissible d-flex align-items-center fade show' role='alert'>";
                     echo "<svg class='bi flex-shrink-0 me-2' width='24' height='24' role='img' aria-label='Danger:'><use xlink:href='#exclamation-triangle-fill'/></svg>";

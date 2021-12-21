@@ -1,5 +1,5 @@
 <?php 
-    include("assets/php/config.php");
+    include("config.php");
 
     if (!isset($_GET['id'])) {
         header('Location: list-siswa.php');
@@ -51,7 +51,7 @@
         </div>
         <div class="card text-dark bg-light rounded-3">
             <div class="card-body">
-            <form class="" action="assets/php/proses-edit.php" method="POST">
+            <form class="" action="proses-edit.php" method="POST" enctype="multipart/form-data">
                 <div class="row d-none">
                     <input type="hidden" name="id" value="<?php echo $siswa['id'] ?>" />
                 </div>
@@ -67,7 +67,7 @@
                         <textarea type="text" class="form-control" id="alamat" name="alamat" rows="3" placeholder="Alamat lengkap" required><?php echo $siswa['alamat'] ?></textarea>
                     </div>
                 </div>
-                <div class="row mb-3">   
+                <div class="row mb-3">
                     <label for="jenis_kelamin" class="form-label col-sm-2">Jenis Kelamin</label>
                     <div class="col-sm-10">
                         <div class="form-check form-check-inline">
@@ -98,6 +98,12 @@
                     <label for="sekolah_asal" class="form-label col-sm-2">Sekolah Asal</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="sekolah_asal" name="sekolah_asal" placeholder="Nama sekolah" value="<?php echo $siswa['sekolah_asal'] ?>" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="foto" class="form-label col-sm-2">Foto</label>
+                    <div class="col-sm-10">
+                        <input type="file" accept=".jpg, .jpeg, .png" class="form-control" id="foto" name="foto">
                     </div>
                 </div>
                 <div class="text-end mb-3">

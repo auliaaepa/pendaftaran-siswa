@@ -31,7 +31,7 @@
         </div>
         <div class="card text-dark bg-light rounded-3">
             <div class="card-body">
-            <form class="" action="assets/php/proses-pendaftaran.php" method="POST">
+            <form class="" action="proses-pendaftaran.php" method="POST" enctype="multipart/form-data">
                 <div class="row my-3">
                     <label for="nama" class="form-label col-sm-2">Nama</label>
                     <div class="col-sm-10">
@@ -76,6 +76,12 @@
                     <label for="sekolah_asal" class="form-label col-sm-2">Sekolah Asal</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" id="sekolah_asal" name="sekolah_asal" placeholder="Nama sekolah" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="foto" class="form-label col-sm-2">Foto</label>
+                    <div class="col-sm-10">
+                        <input type="file" accept=".jpg, .jpeg, .png" class="form-control" id="foto" name="foto"required>
                     </div>
                 </div>
                 <div class="text-end mb-3">
